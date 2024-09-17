@@ -56,9 +56,9 @@ public class Main {
         for(float[] row : z1){
             for(float number: row){
                 if(!Float.isInfinite(number))
-                    System.out.printf("%13.3f ", number);
+                    System.out.printf("%7.3f ", number);
                 else
-                    System.out.printf("%13s ", "Inf");
+                    System.out.printf("%7s ", "Inf");
             }
             System.out.println();
         }
