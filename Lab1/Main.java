@@ -2,7 +2,7 @@ import java.util.Random;
 import java.lang.Math;
 
 public class Main {
-    static final int precision = 1_000_000;
+    static final int PRECISION = 1_000_000;
 
     private static float Calculate1(float x){
         float temp = (float) Math.pow(x/2, x);
@@ -64,7 +64,7 @@ public class Main {
     private static float GenerateRandomFloat(){
         Random rnd = new Random();
 
-        return (float)(rnd.nextInt(-8 * precision, 10 * precision + 1)) / precision;
+        return (float)(rnd.nextInt(-8 * PRECISION, 10 * PRECISION + 1)) / PRECISION;
     }
 
     public static void main(String[] args) {
