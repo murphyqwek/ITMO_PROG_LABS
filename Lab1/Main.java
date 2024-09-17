@@ -55,7 +55,10 @@ public class Main {
     private static void PrintMatrix(float[][] z1){
         for(float[] row : z1){
             for(float number: row){
-                System.out.printf("%10.3f ", number);
+                if(!Float.isInfinite(number))
+                    System.out.printf("%13.3f ", number);
+                else
+                    System.out.printf("%13s ", "Inf");
             }
             System.out.println();
         }
