@@ -2,6 +2,8 @@ import java.util.Random;
 import java.lang.Math;
 
 public class Main {
+    static final int precision = 1_000_000;
+
     private static float Calculate1(float x){
         float temp = (float) Math.pow(x/2, x);
         temp = (float) Math.pow((Math.exp(x) + 1) / 2, temp);
@@ -59,14 +61,19 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
+    private static float GenerateRandomFloat(){
         Random rnd = new Random();
+
+        return (float)(rnd.nextInt(-8 * precision, 10 * precision + 1)) / precision;
+    }
+
+    public static void main(String[] args) {
         short[] z = {18, 16, 14, 12, 10, 8, 6};
 
         //Generate massive x
         float[] x = new float[18];
         for(int i = 0; i < 18; i++)
-            x[i] = rnd.nextFloat(-8.0f, 10.0f + Float.MIN_VALUE);
+            x[i] = GenerateRandomFloat();
 
         float[][] z1 = GenerateZArray(z, x);
 
