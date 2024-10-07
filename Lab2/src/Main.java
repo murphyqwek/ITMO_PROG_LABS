@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public class Main {
     public static void main(String[] args) {
         Battle b = new Battle();
-        Pokemon p1A = new Celebi("Дурень", 1);
+        Pokemon p1A = new Celebi("Дерево", 1);
         Pokemon p2A = new Eevee("Квадробер", 1);
         Pokemon p3A = new Flygon("Пикми", 1);
         b.addAlly(p1A);
